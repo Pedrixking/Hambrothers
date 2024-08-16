@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Hambúrguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Bem-vindo à nossa Hamburgueria!</h1>
+
+    <!-- Seção de Hambúrgueres -->
+    <div class="product-category">
+        <h2>Hambúrgueres</h2>
+        <div class="product">
+            <img src="x-burger.jpg" alt="X-Burger">
+            <p>X-Burger - R$10</p>
+            <button onclick="adicionarCarrinho('X-Burger - R$10')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="x-salada.jpg" alt="X-Salada">
+            <p>X-Salada - R$12</p>
+            <button onclick="adicionarCarrinho('X-Salada - R$12')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="x-bacon.jpg" alt="X-Bacon">
+            <p>X-Bacon - R$14</p>
+            <button onclick="adicionarCarrinho('X-Bacon - R$14')">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Seção de Refrigerantes -->
+    <div class="product-category">
+        <h2>Refrigerantes</h2>
+        <div class="product">
+            <img src="coca-cola.jpg" alt="Coca-Cola">
+            <p>Coca-Cola - R$5</p>
+            <button onclick="adicionarCarrinho('Coca-Cola - R$5')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="guarana.jpg" alt="Guaraná">
+            <p>Guaraná - R$5</p>
+            <button onclick="adicionarCarrinho('Guaraná - R$5')">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Seção de Combos -->
+    <div class="product-category">
+        <h2>Combos</h2>
+        <div class="product">
+            <img src="combo1.jpg" alt="Combo X-Burger">
+            <p>Combo X-Burger + Coca-Cola - R$15</p>
+            <button onclick="adicionarCarrinho('Combo X-Burger + Coca-Cola - R$15')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="combo2.jpg" alt="Combo X-Bacon">
+            <p>Combo X-Bacon + Guaraná - R$18</p>
+            <button onclick="adicionarCarrinho('Combo X-Bacon + Guaraná - R$18')">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Carrinho de Compras -->
+    <div class="cart">
+        <h2>Seu Carrinho:</h2>
+        <ul id="carrinho-lista">
+            <!-- Itens do carrinho aparecem aqui -->
+        </ul>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+
+    <!-- Formulário de Cadastro -->
+    <form id="cadastro" method="post" action="enviar_pedido.php">
+        <h2>Cadastro Rápido:</h2>
+        <input type="text" name="nome" placeholder="Seu Nome" required>
+        <input type="email" name="email" placeholder="Seu E-mail" required>
+        <!-- Campo oculto para armazenar os itens do carrinho -->
+        <input type="hidden" name="pedido" id="pedido-hidden">
+        <button type="submit" onclick="enviarCarrinho()">Enviar Pedido</button>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
