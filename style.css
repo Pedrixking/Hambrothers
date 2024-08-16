@@ -1,12 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #bc0000;
     text-align: center;
 }
 
 h1 {
-    color: #333;
+    color: #000000;
     margin-top: 20px;
+    border-width: 145px;
+    border-radius: 10px;
 }
 
 .product-category {
@@ -60,7 +62,7 @@ button:hover {
 form {
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ecdfdf;
     border: 1px solid #ccc;
     border-radius: 8px;
     max-width: 400px;
